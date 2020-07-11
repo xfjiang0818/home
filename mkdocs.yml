@@ -36,11 +36,10 @@ nav:
     - Bilibili弹幕: other/other_bilibili.md
     - Test: other/other_test.md
     - 网页简化: other/other_webpage.md
-theme: 'windmill'
+
 
 extra_javascript: 
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-markdown_extensions:
-    - mdx_math
+
 extra.article_nav_top: false
 extra.article_nav_bottom: false
