@@ -1,2 +1,46 @@
-site_name: My Docs
+site_name: Jiang X.F.
+nav:
+  - Home: index.md
+  - Start: start.md
+  - Courses:
+    - 毛概:
+      - 绪论: course/maogai_0.md
+      - 第一章: course/maogai_1.md
+      - 第二章: course/maogai_2.md
+      - 第三章: course/maogai_3.md
+      - 第四章: course/maogai_4.md
+      - 第五章: course/maogai_5.md
+      - 第六章: course/maogai_6.md
+      - 第七章: course/maogai_7.md
+    - 英美小说: 
+      - 第一篇 The Chaser: course/week2.md
+      - 第二篇 The Open Window: course/week3.md
+      - 第三篇 A Shocking Accident: course/week4.md
+      - 第四篇 The Luncheon: course/week5.md
+      - 第五篇 The Far and the Near: course/week6.md
+      - 第六篇 The Lady or the Tiger: course/week7.md
+      - 第七篇 The Tell-Tale Heart: course/week8.md
+      - 第八篇 Miss Brill: course/week9.md
+    - 计算物理: course/note1.md
+    - 核天体物理: course/nuclear_astrophysics.md
+  - Tech:
+    - HTML:
+      - Chapter1: tech/XHTML学习_Chapter1.md
+      - Chapter2: tech/XHTML学习_Chapter2.md
+      - Chapter3: tech/XHTML学习_Chapter3.md
+      - Chapter4: tech/XHTML学习_Chapter4.md
+      - Chapter5: tech/XHTML学习_Chapter5.md
+      - Chapter6: tech/XHTML学习_Chapter6.md
+      - Chapter7: tech/CSS学习_Chapter7.md
+  - Other:
+    - Bilibili弹幕: other/other_bilibili.md
+    - Test: other/other_test.md
+    - 网页简化: other/other_webpage.md
 theme: 'windmill'
+
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+markdown_extensions:
+    - mdx_math
+extra.article_nav_top: false
+extra.article_nav_bottom: false
