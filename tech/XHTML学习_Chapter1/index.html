@@ -1,258 +1,102 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Chapter1 - Jiang X.F.</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Chapter1 - Jiang X.F.</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
-  <link rel="stylesheet" href="../../css/theme.css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Chapter1";
-    var mkdocs_page_input_path = "tech\\XHTML\u5b66\u4e60_Chapter1.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "HTML", url: "#_top", children: [
+              {title: "1. \u4ec0\u4e48\u662f HTML", url: "#1-html" },
+              {title: "2. HTML \u6807\u7b7e", url: "#2-html" },
+              {title: "3. \u57fa\u672c\u6587\u672c\u683c\u5f0f", url: "#3" },
+              {title: "4. \u8868\u8c61\u5143\u7d20\uff08presentational elements\uff09", url: "#4-presentational-elements" },
+              {title: "5. \u77ed\u8bed\u5143\u7d20\uff08phrase elements\uff09", url: "#5-phrase-elements" },
+              {title: "6. Lists", url: "#6-lists" },
+              {title: "7.Editing Text", url: "#7editing-text" },
+              {title: "8. \u4e3a\u7279\u6b8a\u5b57\u7b26\u4f7f\u7528\u5b57\u7b26\u5b9e\u4f53", url: "#8" },
+              {title: "9. \u6ce8\u91ca", url: "#9" },
+              {title: "10. \\ \u5143\u7d20\uff08\u4e0d\u5efa\u8bae\u4f7f\u7528\uff09", url: "#10" },
+              {title: "11. \u7406\u89e3 Block Elements \u548c Inline Elements", url: "#11-block-elements-inline-elements" },
+              {title: "12. Grouping Elements with \\ and \\", url: "#12-grouping-elements-with-and" },
+              {title: "13. \u6838\u5fc3\u5143\u7d20\u548c\u5c5e\u6027", url: "#13" },
+              {title: "14. \u5c5e\u6027\u7c7b\u522b", url: "#14" },
+              {title: "Summary", url: "#summary" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-  <div class="wy-grid-for-nav">
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Jiang X.F.</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+      
+    
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../start/">Start</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Courses</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="#">毛概</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/maogai_0/">绪论</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/maogai_1/">第一章</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/maogai_2/">第二章</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/maogai_3/">第三章</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/maogai_4/">第四章</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/maogai_5/">第五章</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/maogai_6/">第六章</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/maogai_7/">第七章</a>
-                </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="#">英美小说</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/week2/">第一篇 The Chaser</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/week3/">第二篇 The Open Window</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/week4/">第三篇 A Shocking Accident</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/week5/">第四篇 The Luncheon</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/week6/">第五篇 The Far and the Near</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/week7/">第六篇 The Lady or the Tiger</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/week8/">第七篇 The Tell-Tale Heart</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../course/week9/">第八篇 Miss Brill</a>
-                </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../course/note1/">计算物理</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../course/nuclear_astrophysics/">核天体物理</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Tech</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="#">HTML</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Chapter1</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#1-html">1. 什么是 HTML</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-html">2. HTML 标签</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3">3. 基本文本格式</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_1">多个空格与换行</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_2">使用\ 产生标题</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#align">align属性（不建议使用）</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_3">使用\ 产生段落</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_4">使用\ 换行</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_5">使用\ 创建预格式化文本</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-presentational-elements">4. 表象元素（presentational elements）</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-phrase-elements">5. 短语元素（phrase elements）</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#6-lists">6. Lists</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_6">\ 元素创建无序列表</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_7">\ 元素创建有序列表</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_8">定义列表</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_9">嵌套列表</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#7editing-text">7.Editing Text</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#8">8. 为特殊字符使用字符实体</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#9">9. 注释</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#10">10. \ 元素（不建议使用）</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#11-block-elements-inline-elements">11. 理解 Block Elements 和 Inline Elements</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#12-grouping-elements-with-and">12. Grouping Elements with \ and \</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#xml-the-xml-declaration">XML 标记（The XML Declaration）</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#document-type-declaration">文档类型声明（Document Type Declaration）</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#13">13. 核心元素和属性</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#_10">\</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_11">\</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_12">\</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_13">\</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#14">14. 属性类别</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#141-core-attributes">14.1 Core attributes</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#142-internationalization">14.2 Internationalization</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#143-ui-events">14.3 UI Events</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
-    </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/">Chapter2</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter3/">Chapter3</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter4/">Chapter4</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter5/">Chapter5</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter6/">Chapter6</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../CSS%E5%AD%A6%E4%B9%A0_Chapter7/">Chapter7</a>
-                </li>
-    </ul>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Other</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../other/other_bilibili/">Bilibili弹幕</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../other/other_test/">Test</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../other/other_webpage/">网页简化</a>
-                    </li>
-                </ul>
-      </div>
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-xs btn-link">
+        Chapter2
+      </a>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Jiang X.F.</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
     
-      
-        
-          <li>HTML &raquo;</li>
-        
-      
-        
-          <li>Tech &raquo;</li>
-        
-      
+    <div class="wm-article-nav">
+      <a href="../../course/nuclear_astrophysics/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../course/nuclear_astrophysics/" class="btn btn-xs btn-link">
+        核天体物理
+      </a>
+    </div>
     
-    <li>Chapter1</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="html">HTML</h1>
+  </div>
+
+    
+
+    <h1 id="html">HTML</h1>
 <h3 id="1-html">1. 什么是 HTML</h3>
 <p><strong>HTML</strong>是超文本标记语言（Hypertext Markup Language）</p>
 <blockquote>
@@ -759,58 +603,43 @@ Paragraph two&lt;br /&gt;&lt;br /&gt;
 <p>有一些事件仅适用于表单</p>
 <p>onfocus onblur onsubmit onreset onselect onchange</p>
 <h3 id="summary">Summary</h3>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+
+  <br>
+    
+
+    
+    
       
-        <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-neutral float-right" title="Chapter2">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../course/nuclear_astrophysics/" class="btn btn-neutral" title="核天体物理"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-xs btn-link">
+        Chapter2
+      </a>
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+    
+    <div class="wm-article-nav">
+      <a href="../../course/nuclear_astrophysics/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../course/nuclear_astrophysics/" class="btn btn-xs btn-link">
+        核天体物理
+      </a>
+    </div>
     
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../../course/nuclear_astrophysics/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+    <br>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-      <script src="../../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
 
 </body>
 </html>
