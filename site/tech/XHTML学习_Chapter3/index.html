@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Chapter3 - Jiang X.F.</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Chapter 3 Images, Audio, and Video", url: "#_top", children: [
+              {title: "1. \u4f7f\u7528 \\ \u5143\u7d20\u6dfb\u52a0\u56fe\u7247", url: "#1" },
+              {title: "2. \u4f7f\u7528\u56fe\u50cf\u4f5c\u4e3a\u94fe\u63a5", url: "#2" },
+              {title: "3. Image maps \u56fe\u50cf\u6620\u5c04", url: "#3-image-maps" },
+              {title: "4. Choosing the Right Image Format", url: "#4-choosing-the-right-image-format" },
+              {title: "5. Adding Flash\uff0cVideo\uff0cand Audio to Your Web Pages", url: "#5-adding-flashvideoand-audio-to-your-web-pages" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter4/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter4/" class="btn btn-xs btn-link">
+        Chapter4
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-xs btn-link">
+        Chapter2
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="chapter-3-images-audio-and-video">Chapter 3 Images, Audio, and Video</h1>
+<p>图像：image</p>
+<p>动画：animation</p>
+<p>音频：audio</p>
+<p>视频：video</p>
+<p>学习内容：</p>
+<ul>
+<li>使用 \<img> 添加图像到页面、将图像变成链接、将一个图像分成多个部分并将不同的分本链接到不同的页面（图像映射，<em>image map</em>）</li>
+<li>研究网络上使用的主要图像格式（JPEG，GIF，PNG），这会影响 web 页面的加载速度</li>
+<li>更多的多媒体元素</li>
+</ul>
+<h2 id="1">1. 使用 \<img> 元素添加图片</h2>
+<p>必须有两个属性，src 属性指示路径，alt 属性写描述</p>
+<pre><code class="html">&lt;img src=&quot;logo.gif&quot; alt=&quot;logo&quot; /&gt;
+</code></pre>
+
+<p>\<img> 可以携带所有的通用属性和 UI 事件属性，以及</p>
+<p>src alt align border height width hspace vspace ismap usemap longdesc name</p>
+<h3 id="src">src</h3>
+<p>指示 URL，可以是绝对或者相对</p>
+<p>一般来说图像应该一直保持在自己的服务器上，别人无法移动</p>
+<p>大多数网站作者为图像创建一个单独的目录</p>
+<h3 id="alt">alt</h3>
+<p>必须出现在每个 \<img> 元素上并真实地描述图像，因为</p>
+<ul>
+<li>如果浏览器无法正确显示图像，可能显示文本</li>
+<li>web 用户有时会使用屏幕阅读器，此时文本会描述他们看不到的图片</li>
+<li>有助于搜索引擎搜到自己的网站</li>
+</ul>
+<p>有时图像不传达信息，只是装饰元素，此时 alt 属性仍然因该使用，但不赋值</p>
+<pre><code class="html">&lt;img src=&quot;xxxx&quot; alt=&quot;&quot; /&gt;
+</code></pre>
+
+<h3 id="height-width">height / width</h3>
+<p>指定高度和宽度，以像素为单位</p>
+<pre><code class="html">&lt;img src=&quot;xxxx&quot; alt=&quot;xxxx&quot; height=&quot;120&quot; width=&quot;180&quot; /&gt;
+</code></pre>
+
+<p>属性的值也可以是浏览器屏幕的百分比，或者某一包含元素的百分比，即数字+百分号，但是百分比的情况非常少见</p>
+<p>显示创建时的大小以外任何大小的图像都会引起图像失真或模糊</p>
+<p>指定图像的大小是好习惯，应该尝试对所有图像使用这一属性，有助于页面更快加载（浏览器知道要分配多少空间），并且在加载的时候正确显示其它的部分</p>
+<p>应该以创建与使用的图片大小相同的图片为目标，使用 Photoshop 等完成</p>
+<ul>
+<li>
+<p>若页面上的图像比实际的大，会显示模糊</p>
+</li>
+<li>
+<p>若页面上的图像比实际的小，那么浏览器的加载速度会不必要地减慢，因为图像越小加载越快。同时，费流量费钱</p>
+</li>
+</ul>
+<p>在只指定了一个属性时，会自动保持长宽比，同时指定了两个属性但长宽比与初始不同时，会对图片进行伸缩</p>
+<p><strong>其它的属性很少使用/逐步弃用，在较早的网页上可看到</strong></p>
+<h3 id="alignborderhspacevspacename">align，border，hspace，vspace，name 不建议</h3>
+<h3 id="ismapusemap">ismap，usemap</h3>
+<p>见之后的部分</p>
+<h3 id="longdesc">longdesc</h3>
+<p>指示一个 URL，这个 URL 中有图片更详细的信息</p>
+<p>有时图像会包含图形图标等非常多的信息，提供详细描述可以</p>
+<ul>
+<li>帮助搜索引擎</li>
+<li>帮助视觉障碍的用户</li>
+</ul>
+<p>但是，任何主要浏览器都不支持 longdesc 属性，因此可以在图像旁边放一个链接进行详细描述。</p>
+<h2 id="2">2. 使用图像作为链接</h2>
+<pre><code class="html">&lt;a href=&quot;../index.html&quot; title=&quot;click here to return to home page&quot;&gt;
+    &lt;img src=&quot;images/logo.gif&quot; width=&quot;338&quot; height=&quot;79&quot; alt=&quot;logo&quot; /&gt;
+&lt;/a&gt;
+</code></pre>
+
+<h2 id="3-image-maps">3. Image maps 图像映射</h2>
+<p>图像映射允许向同一图像添加多个链接，每个链接指向不同的页面。当图像被分成不规则区域时这个很有用，比如地图。每个可点击的区域称为 <em>hotspot</em> 热点</p>
+<p>图像映射的工作方式基于 x 和 y 坐标，这些坐标从图像的左上角测量，有两种用法</p>
+<ul>
+<li>指定热点的位置</li>
+<li>确定用户点击图像的位置</li>
+</ul>
+<p>通过比较热点的坐标和用户单击的坐标，可以将用户发送到该热点指定的链接</p>
+<p>有两种类型的图像映射，作用相同。不同之处在于如何计算出点击的热点</p>
+<ul>
+<li><strong>Client-side image maps</strong>：web 浏览器计算出用户点击了哪一部分，并将用户带到相应页面</li>
+<li><strong>Server-side image maps</strong>：浏览器向服务器发送坐标，表示用户点击了图像的哪个部分，这些坐标由服务器上的脚本处理，该脚本决定用户应该被带到哪个页面</li>
+</ul>
+<h3 id="client-side-image-maps">Client-Side Image Maps</h3>
+<h3 id="server-side-image-maps">Server-Side Image Maps</h3>
+<p><strong>注：内容很多，暂时用不到</strong></p>
+<h2 id="4-choosing-the-right-image-format">4. Choosing the Right Image Format</h2>
+<p>选择正确的图像格式保证网页加载不会不必要的变慢</p>
+<p>网上大部分的图像的都是 <em>bitmapped images</em> 位图，将图像分成 <em>pixels</em> 像素网格并单独上色</p>
+<p>图像每平方英寸的像素数称为图像的 <em>resolution</em> 分辨率，通常以每英寸 72 像素的分辨率保存在 Web 上使用的图像是正常的，因为，这对应着计算机屏幕上每平方英寸的像素数。相比之下，用于打印的图像提供给打印机时通常是 300 点每英寸。</p>
+<p>图像每英寸包含的像素越多，文件的大小就越大，通过 Web 传播的时间就越长。因此，<strong>在网络上使用的任何图像都应以每英寸 72 点的分辨率保存</strong>，如果保存得更大，则会创建不必要的大文件，将花费更长的时间下载。</p>
+<blockquote>
+<p>300 -&gt; 72 很轻松，但是 72 -&gt; 300 很难。拥有 300 的高分辨率图像时应该将 72 的在网络上使用，同时保留原始版本</p>
+</blockquote>
+<p>浏览器倾向于支持三种常见的位图图像格式：</p>
+<ul>
+<li>GIF：Graphics Interchange Format</li>
+<li>JPEG：Joint Photographic Experts Group Format</li>
+<li>PNG：Portable Network Graphics</li>
+</ul>
+<p><strong>注：这里对每一种格式进行了分析，暂时不看</strong></p>
+<h2 id="5-adding-flashvideoand-audio-to-your-web-pages">5. Adding Flash，Video，and Audio to Your Web Pages</h2>
+<p><strong>注：太多了，不看</strong></p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter4/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter4/" class="btn btn-xs btn-link">
+        Chapter4
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter2/" class="btn btn-xs btn-link">
+        Chapter2
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>

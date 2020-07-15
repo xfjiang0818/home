@@ -36,7 +36,7 @@ nav:
     - Bilibili弹幕: other/other_bilibili.md
     - Test: other/other_test.md
     - 网页简化: other/other_webpage.md
-theme: 'readthedocs'
+theme: 'windmill'
 
 extra_javascript: 
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML

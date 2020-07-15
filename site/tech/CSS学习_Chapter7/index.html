@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Chapter7 - Jiang X.F.</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Chapter 7 Cascading Style Sheets", url: "#_top", children: [
+              {title: "1. Introducing CSS", url: "#1-introducing-css" },
+              {title: "2. Where You Can Add CSS Rules", url: "#2-where-you-can-add-css-rules" },
+              {title: "3. CSS Properties", url: "#3-css-properties" },
+              {title: "4. Controlling Text", url: "#4-controlling-text" },
+              {title: "5. Text Formatting", url: "#5-text-formatting" },
+              {title: "6. Text Pseudo-Classes", url: "#6-text-pseudo-classes" },
+              {title: "7. Selectors", url: "#7-selectors" },
+              {title: "8. Lengths", url: "#8-lengths" },
+              {title: "9. Introducing the Box Model", url: "#9-introducing-the-box-model" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../other/other_bilibili/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../other/other_bilibili/" class="btn btn-xs btn-link">
+        Bilibili弹幕
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter6/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter6/" class="btn btn-xs btn-link">
+        Chapter6
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="chapter-7-cascading-style-sheets">Chapter 7 Cascading Style Sheets</h1>
+<p>学习内容：</p>
+<ul>
+<li>CSS 规则的构成</li>
+<li>如何在文档中放置 CSS 规则以及如何链接到外部 CSS 文档</li>
+<li>属性和值如何控制文档中不同元素的显示</li>
+<li>如何使用 CSS 控制文本的显示</li>
+<li>CSS 如何基于 box 模型，以及如何为这些 box 设置不同的属性</li>
+</ul>
+<h2 id="1-introducing-css">1. Introducing CSS</h2>
+<p>CSS 规则由两部分组成：</p>
+<ul>
+<li><em>selector</em> 指示应用于哪个或哪些元素，应用于多个时，使用逗号分隔</li>
+<li><em>declaration</em> 规定如何设置 <em>selector</em> 选择的样式</li>
+</ul>
+<pre><code class="css">td {width:36px;}
+</code></pre>
+
+<p>declaration 也分为两个部分：</p>
+<ul>
+<li><em>property</em> 选择想要影响的 element(s)</li>
+<li><em>value</em> 是 property 的规范</li>
+</ul>
+<p>举例如下</p>
+<pre><code class="css">h1, h2, h3 {
+    font-weight:bold;
+    font-family:arial;
+    color:#000000;
+    background-color:#FFFFFF;
+}
+</code></pre>
+
+<p>CSS 规则可以存在于 XHTML 文档中，也可以存在于单独的文件中，同时 XHTML 包含到这个 <em>style sheet</em> 文件的链接</p>
+<p>XHTML：</p>
+<pre><code class="html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;CSS Example&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;ch07_eg01.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Basic CSS Font Properties&lt;/h1&gt;
+    &lt;p&gt;The following table shows you the basic CSS font 
+        properties that allow you to change the appearance of 
+        text in your document.&lt;/p&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Property&lt;/th&gt;
+            &lt;th&gt;Purpose&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;code&quot;&gt;font-family&lt;/td&gt;
+            &lt;td&gt;Specifies the font used.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;code&quot;&gt;font-size&lt;/td&gt;
+            &lt;td&gt;Specifies the size of the font used.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;code&quot;&gt;font-style&lt;/td&gt;
+            &lt;td&gt;Specifies whether the font should be 
+                normal, italic or oblique.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;code&quot;&gt;font-weight&lt;/td&gt;
+            &lt;td&gt;Specifies whether the font should be 
+                normal, bold, bolder, or lighter&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>CSS：</p>
+<pre><code class="css">/* Style sheet for ch07_eg01.html */
+</code></pre>
+
+<p>/<em> 和 </em>/ 之间的内容会被无视掉，并且不会对页面的外观产生影响</p>
+<pre><code class="css">body {
+    color:#000000;
+    background-color:#ffffff;
+    font-family:arial, verdana, sans-serif;
+}
+</code></pre>
+
+<p>第一个规则应用于 \<body> 元素，在指定的页面上使用的任何文本和行的默认颜色是黑色，并且页面的背景应该是白色的。颜色使用十六进制代码表示。整个文件的字体是 Arial ，如果没有，就用 Verdana 字体；否则，将使用默认字体组。</p>
+<pre><code class="css">h1 {font-size:18pt;}
+p {font-size:12pt}
+</code></pre>
+
+<p>设定字体大小</p>
+<pre><code class="css">table {
+    back-ground-color:#efefef;
+    border-style:solid;
+    border-width:1px;
+    border-color:#999999;
+}
+</code></pre>
+
+<p>设定表格的背景为灰色，加上一个边框。边框是 solid 而不是 dashed 或 dotted 的。边框有 1 pixel 厚，颜色为 light grey </p>
+<pre><code class="css">th {
+    background-color:#cccccc;
+    font-weight:bold;
+    padding:5px;
+}
+</code></pre>
+
+<p>表格标题的背景为中灰色，文本以粗体显示，在单元格边缘和文本之间有 5 个像素的 <em>padding</em> 填充</p>
+<pre><code class="css">td {padding:5px;}
+</code></pre>
+
+<p>各个表格数据单元格还具有5个填充像素</p>
+<pre><code class="css">td.code {
+    font-family:courier, courier-new, serif;
+    font-weight:bold;
+}
+</code></pre>
+
+<p>为所有 class="code" 的元素设定字体</p>
+<h3 id="inheritance">Inheritance</h3>
+<p>CSS 的强大功能之一是当一个 property 被应用到一个 element 之后，这个 element 中包含的所有子元素都会继承这个规则</p>
+<p>如果另一个规则更具体地说明它应用于哪些元素，那么它将覆盖之前的属性</p>
+<p>具体的属性详见附录C</p>
+<h2 id="2-where-you-can-add-css-rules">2. Where You Can Add CSS Rules</h2>
+<ul>
+<li>
+<p>可以放在外部</p>
+</li>
+<li>
+<p>也可以放在内部的两个地方：</p>
+</li>
+<li>\<style> 元素内，它位于文档的 \<head> 元素中</li>
+<li>作为 style 属性的值，这对于所有可携带 style 属性的元素都适用</li>
+</ul>
+<p>当样式表规则保存在文档头部的 \<style> 元素中时，称为一个 <em>internal style sheet</em>，例：</p>
+<pre><code class="html">&lt;head&gt;
+    &lt;title&gt;Internal Style sheet&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body {
+            color:#000000;
+            background-color:#ffffff;
+            font-family:arial, verdana, sans-serif;
+        }
+        h1 {font-size:18pt;}
+        p {font-size:12pt;}
+    &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+
+<p>当 XHTML 元素使用 style 属性的时候，称为 <em>inline style rules</em>，例：</p>
+<pre><code class="html">&lt;td style=&quot;font-family:courier; padding:5px; border-style:solid;
+           border-width:1px; border-color:#000000;&quot;&gt;
+</code></pre>
+
+<blockquote>
+<p>不建议使用 style 属性，违背了 XHTML 只负责标记结构的原则</p>
+</blockquote>
+<h3 id="_1">\<link> 元素</h3>
+<p>用来描述两个文档之间的关系。例如，可以使用它来指定页面使用的 style sheet。也可以有其他的用途，例如指定页面相对应的 RSS 提要</p>
+<p>这种来链接与 \<a> 非常不同，因为不需要点击什么来激活，它自动相关联</p>
+<p>\<link> 元素始终是空元素，它与 style sheet 一起使用时，必须有三个属性：type，ref 和 href</p>
+<pre><code class="css">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../CSS/interface.css&quot; /&gt;
+</code></pre>
+
+<p>各种属性：</p>
+<h4 id="rel"><em>rel</em></h4>
+<p>必需，指定包含连接的文档与被链接的文档之间的关系</p>
+<pre><code class="html">rel=&quot;stylesheet&quot;
+</code></pre>
+
+<h4 id="type"><em>type</em></h4>
+<p>指定链接道德文档的 MIME 类型。处理 CSS 表时的类型为 text/css</p>
+<pre><code class="html">type=&quot;text/css&quot;
+</code></pre>
+
+<h4 id="href"><em>href</em></h4>
+<p>指定链接到的文档的 URL，可以是绝对 URL 也可以是相对 URL</p>
+<pre><code class="html">href=&quot;../stylesheet/interface.css&quot;
+</code></pre>
+
+<h4 id="hreflang"><em>hreflang</em></h4>
+<p>指定写入指定资源的语言。在使用时，它的值是附录G中之一</p>
+<pre><code class="html">hreflang=&quot;en-US&quot;
+</code></pre>
+
+<h4 id="media"><em>media</em></h4>
+<p>指定文档的输出设备</p>
+<pre><code class="html">media=&quot;screen&quot;
+</code></pre>
+
+<p>不常使用，在使用稀奇古怪的设备访问网页时可能会用到</p>
+<h3 id="_2">\<style> 元素</h3>
+<p>\<style> 元素使用于 \<head> 元素中，在 web 页面中包含样式表规则而不是链接到外部。</p>
+<p>当一个页面需要包含一些额外的规则，而这些规则并不适用于所用共享样式的站点的其它页面时，有时会用到。</p>
+<pre><code class="html">&lt;head&gt;
+    &lt;title&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../styles/mySite.css&quot; /&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+            h1 {color:#FF0000;}
+        &lt;/style&gt;
+    &lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+
+<p>type 是必带属性，还可以携带：dir，lang，media，title，type</p>
+<h3 id="external-css-style-sheets">External CSS Style Sheets 的优点</h3>
+<ul>
+<li>就写一次，省劲儿</li>
+<li>好改</li>
+<li>浏览器会保存 CSS 样式表的副本，在访问第一页的时候会下载，后面几页的访问速度会加快，同时减小了服务器的压力</li>
+<li>作为模板</li>
+<li>同一文档使用不同的样式表</li>
+<li>样式表相互导入</li>
+<li>删除样式表更适合视觉障碍者使用</li>
+</ul>
+<h2 id="3-css-properties">3. CSS Properties</h2>
+<p>查表</p>
+<h2 id="4-controlling-text">4. Controlling Text</h2>
+<p>控制文档中文本外观的属性可分为两组</p>
+<ul>
+<li>直接影响字体和外观的</li>
+<li>对所有字体都有影响的，例如颜色、间距</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>font</td>
+<td>将下面几个属性结合成一个</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td></td>
+</tr>
+<tr>
+<td>font-size</td>
+<td></td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>normal or bold</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>normal, italic or oblique</td>
+</tr>
+<tr>
+<td>font-strecth</td>
+<td>控制字体中实际字符的宽度</td>
+</tr>
+<tr>
+<td>font-variant</td>
+<td>普通字体/小写字体</td>
+</tr>
+<tr>
+<td>font-size-adjust</td>
+<td>字体大小，宽高比</td>
+</tr>
+</tbody>
+</table>
+<p>font 不同于 typeface</p>
+<ul>
+<li>typeface 是 font 的家族，比如 Arial</li>
+<li>font 是家族中的具体成员，比如 Arial 12-point bold</li>
+</ul>
+<p>typeface 分为两类</p>
+<ul>
+<li>serif 衬线字体</li>
+<li>sans-serif 无衬线字体</li>
+</ul>
+<blockquote>
+<p>monospace 等宽字体</p>
+<p>non-monospace 不等宽字体 </p>
+</blockquote>
+<p>衬线字体适合印刷，无衬线字体适合网络，因为屏幕的分辨率不如打印出来的文档</p>
+<h3 id="41-the-font-family-property">4.1 The font-family Property</h3>
+<h3 id="42-the-font-size-property">4.2 The font-size Property</h3>
+<h3 id="43-the-font-weight-property">4.3 The font-weight Property</h3>
+<h3 id="44-the-font-style-property">4.4 The font-style Property</h3>
+<h3 id="45-the-font-variant-property">4.5 The font-variant Property</h3>
+<h3 id="46-the-font-stretch-property">4.6 The font-stretch Property</h3>
+<h3 id="47-the-font-size-adjust-property">4.7 The font-size-adjust Property</h3>
+<h2 id="5-text-formatting">5. Text Formatting</h2>
+<p>除了影响 font 的属性，影响外观的其它属性</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td></td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>文本在包含它的元素内的水平对齐方式</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>文本在包含它的元素内的垂直对齐方式</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>是否加下划线、横线、删除线、闪烁文本</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>从左边框缩进</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>指定内容为全部大写、小写</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>阴影</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>字母间的宽度</td>
+</tr>
+<tr>
+<td>word-spacing</td>
+<td>单词之间的空间</td>
+</tr>
+<tr>
+<td>white-space</td>
+<td>是否应该折叠、保留或防止包装空白</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>指定文本的方向（类似于 dir 属性）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-text-pseudo-classes">6. Text Pseudo-Classes</h2>
+<p>有两个伪类可以帮助处理文本，允许以与元素其余部分不同的方式呈现元素的第一个字母或第一行</p>
+<h3 id="61-the-first-letter-pseudo-class">6.1 The first-letter Pseudo-Class</h3>
+<p>仅为元素的首字母指定规则，在某些杂志文章或书籍中常用于新页面的第一个字符</p>
+<pre><code class="css">p.introduction:first-letter {font-size:42px;}
+</code></pre>
+
+<p>应用于 p 元素首字母</p>
+<h3 id="62-the-first-line-pseudo-class">6.2 The first-line Pseudo-Class</h3>
+<p>第一行，值得注意的是这个第一行是真的第一行，无论浏览器一行显示多少</p>
+<pre><code class="css">p.introduction:first-line {font-weight:bold;}
+</code></pre>
+
+<h2 id="7-selectors">7. Selectors</h2>
+<p>各种各样的选择器</p>
+<h3 id="universal-selector">Universal Selector</h3>
+<h3 id="the-type-selector">The Type Selector</h3>
+<h3 id="the-class-selector">The Class Selector</h3>
+<h3 id="the-id-selector">The ID Selector</h3>
+<h3 id="the-child-selector">The Child Selector</h3>
+<h3 id="the-descendant-selector">The Descendant Selector</h3>
+<h3 id="the-adjzcent-sibling-selector">The Adjzcent Sibling Selector</h3>
+<h3 id="the-general-sibling-selector">The General Sibling Selector</h3>
+<h3 id="using-child-and-sibling-selectors-to-reduce-dependence-on-classes-in-markup">Using Child and Sibling Selectors To Reduce Dependence on Classes in Markup</h3>
+<h3 id="attribute-selectors">Attribute Selectors</h3>
+<h2 id="8-lengths">8. Lengths</h2>
+<p>CSS 中指定长度的三种方式</p>
+<ul>
+<li>Relative units</li>
+<li>Absolute units</li>
+<li>Percentages</li>
+</ul>
+<h3 id="relative-units">Relative Units</h3>
+<h4 id="px">px</h4>
+<h4 id="em">em</h4>
+<h4 id="ex">ex</h4>
+<h3 id="absolute-units">Absolute Units</h3>
+<h3 id="percentages">Percentages</h3>
+<h2 id="9-introducing-the-box-model">9. Introducing the Box Model</h2>
+<p><em>box</em> 模型是 CSS 中非常重要的概念，决定了元素在浏览器窗口中的位置，名字源于 CSS 将每个元素都当作在一个 box 中</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td></td>
+</tr>
+<tr>
+<td>margin</td>
+<td>两个 box 的 border 之间的距离</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>box 里的内容到 border 之间的距离</td>
+</tr>
+</tbody>
+</table>
+<p>margin 的有趣问题：两个 margin 相遇时只会显示较大的那个</p>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../other/other_bilibili/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../other/other_bilibili/" class="btn btn-xs btn-link">
+        Bilibili弹幕
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter6/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../XHTML%E5%AD%A6%E4%B9%A0_Chapter6/" class="btn btn-xs btn-link">
+        Chapter6
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
